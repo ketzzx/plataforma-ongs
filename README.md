@@ -73,14 +73,6 @@ Formulário completo com validação nativa HTML5 e máscaras para CPF, telefone
 
 ---
 
-## 🚀 Publicação
-
-O projeto está hospedado via **GitHub Pages** e pode ser acessado neste link:
-
-🔗 [Acesse o site da ONG](https://ketzzx.github.io/plataforma-ongs/)
-
----
-
 ## 🧩 Como testar localmente
 
 1. Baixe o repositório (`Code → Download ZIP`).
