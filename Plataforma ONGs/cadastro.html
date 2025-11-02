@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro — ONG Exemplo</title>
+  <meta name="description" content="Formulário de cadastro para voluntários e doadores.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o formulário</a>
+
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/img/logo.png" alt="Logo ONG Exemplo" class="logo">
+      <nav aria-label="Menu principal">
+        <ul class="nav">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Cadastro — voluntariado e doação</h1>
+
+    <form id="cadastroForm" action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" required minlength="2" aria-required="true" placeholder="Seu nome completo">
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required aria-required="true" placeholder="seu@exemplo.com">
+
+        <label for="cpf">CPF</label>
+        <!-- pattern aceita formato com pontuações ou apenas dígitos; máscara JS aplica formatação -->
+        <input id="cpf" name="cpf" type="text" inputmode="numeric" required aria-required="true"
+               pattern="^\d{3}\.?\d{3}\.?\d{3}\-?\d{2}$" maxlength="14" placeholder="000.000.000-00">
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" inputmode="tel" required
+               pattern="^\(?\d{2}\)?\s?\d{4,5}\-?\d{4}$" maxlength="15" placeholder="(00) 90000-0000">
+
+        <label for="nasc">Data de nascimento</label>
+        <input id="nasc" name="nasc" type="date" required>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <label for="cep">CEP</label>
+        <input id="cep" name="cep" type="text" inputmode="numeric" required pattern="^\d{5}\-?\d{3}$" maxlength="9" placeholder="00000-000">
+
+        <label for="end">Endereço</label>
+        <input id="end" name="end" type="text" required placeholder="Rua, número, complemento">
+
+        <label for="cidade">Cidade</label>
+        <input id="cidade" name="cidade" type="text" required>
+
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione</option>
+          <option value="SP">SP</option>
+          <option value="RJ">RJ</option>
+          <option value="MG">MG</option>
+          <!-- incluir lista completa -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferências</legend>
+        <label for="tipo">Quero me candidatar como</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecione</option>
+          <option value="voluntario">Voluntário</option>
+          <option value="doador">Doador</option>
+          <option value="apoio">Apoio/Parceiro</option>
+        </select>
+
+        <label for="mensagem">Mensagem (opcional)</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?"></textarea>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit">Enviar cadastro</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>&copy; ONG Exemplo</p></div>
+  </footer>
+
+  <script src="js/scripts.js" defer></script>
+</body>
+</html>
